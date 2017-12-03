@@ -17,9 +17,9 @@ function parse_text_input(lines) {
 			} else if (c >= '1' && c <= '4') {
 				var num = parseInt(c, 10);
 				board.nodes[i][j] = new Node(null, 2 * num);
-			} else if ('tsdph'.indexOf(c) > -1) {
+			} else if ('szlw6'.indexOf(c) > -1) {
 				board.nodes[i][j] = new Node(c, 2);
-			} else if ('TSDPH'.indexOf(c) > -1) {
+			} else if ('SZLW^'.indexOf(c) > -1) {
 				board.nodes[i][j] = new Node(c.toLowerCase(), 1);
 				board.terminators.push({'x': j, 'y': i});
 				terminator_count[c] = (terminator_count[c] || 0) + 1;
@@ -130,10 +130,10 @@ function build_svg_from_board(board) {
 
 	var edge_colors = {
 		's': '#fc1f20',
-		'd': '#0086ff',
-		't': '#ffa515',
-		'p': '#009e00',
-		'h': '#ca197d'
+		'z': '#0086ff',
+		'l': '#ffa515',
+		'w': '#009e00',
+		'6': '#ca197d'
 	};
 
 	var revealrange = document.getElementById('revealrange');
