@@ -1,38 +1,47 @@
 LYNE puzzle solver
 ==================
+LYNE 谜题解决机 汉化版
 
-[![Donate using PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=denilsonsa%40gmail%2ecom&lc=US&item_name=Denilson&item_number=lyne-solver&currency_code=BRL) [![Flattr this project](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=denilsonsa&url=https%3A%2F%2Fgithub.com%2Fdenilsonsa%2Flyne-solver&title=LYNE+solver&description=Solver+for+LYNE+game.&tags=github&category=software)
+给原作者打赏：[![Donate using PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=denilsonsa%40gmail%2ecom&lc=US&item_name=Denilson&item_number=lyne-solver&currency_code=BRL)
 
-This is a solver for [LYNE][] game. It can also gradually show the connections, which is a helpful way to get a hint without showing the entire solution.
+在Flattr上马一个：[![Flattr this project](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=denilsonsa&url=https%3A%2F%2Fgithub.com%2Fdenilsonsa%2Flyne-solver&title=LYNE+solver&description=Solver+for+LYNE+game.&tags=github&category=software)
 
-The solver is written in JavaScript and HTML+CSS+SVG. It should work on any modern browser, desktop or mobile. It has been tested on Google Chrome 43 and Mozilla Firefox 38.
+这是一个供 [LYNE][] 游戏使用的答案生成器，同时支持逐步显示连接路径来为玩家提供提示（而非整个谜题的答案）。
 
-[Open the solver online, in your browser!][solver]
+这个生成器使用 JavaScript 以及 HTML、CSS和SVG编写，应该能在桌面端和移动端的任意高级浏览器上正常运行。
 
-How to use this solver
+生成器在 Google Chrome 43 和 Mozilla Firefox 38 上测试成功。
+
+[点此通过浏览器在线使用！][solver]
+
+如何使用？
 ----------------------
 
-Write the puzzle description as text in the main text box. Click `Solve it!` to find a solution. Drag the slider to gradually reveal random lines until the full solution is shown.
+在输入框中以文字形式键入谜题布局， 点击 `Solve it!` 按钮查找一个解。拖动滑条可以逐渐显示路径，直至路径全部显示（谜题答案出现）。
 
-The puzzle description is plain text formed by the following characters:
+谜题布局的输入方式以下方字母定义：
 
-* Lower-case `t`, `s`, `d`, `p`, `h` letters denote shapes.
-* Upper-case `T`, `S`, `D`, `P`, `H` letters denote terminator nodes (shapes that are white inside). Paths will always start and end in a terminator node.
-* Numbers `1`, `2`, `3`, `4` denote gray shapes that have 1, 2, 3 or 4 paths passing through them.
-* Space character denotes an empty space.
-* Alternatively, the `0` (zero) character also denotes an empty space.
+* 小写字母 `t`, `s`, `d`, `p`, `h` 代表经过点的图形
 
-Note that the original LYNE game only contains 3 shapes and does not have all 4 types of gray nodes.
+（其中t=三角形，s=正方形，d=菱形，p=五边形，h=六边形）
+* 大写字母 `T`, `S`, `D`, `P`, `H` 代表起止点图形（中间会有一个白色填充）
+* 数字 `1`, `2`, `3`, `4` 代表可以多次经过的图形（数字代表可以经过的次数）
+* `空格` 代表一个没有图形的分隔点
+* 同时 `0` (零) 也可以代表分隔点
 
-Offline usage
+请注意在原版 LYNE 游戏中最多出现 3 种图形，且不会同时出现全部 4 种可多次经过的图形。
+
+离线使用
 -------------
 
-This solver can be downloaded and used offline. However, running it from the local filesystem on Google Chrome will not work due to "same origin" security restrictions. [Read more about it][sameorigin], or follow [issue 47416][sameoriginissue]. Firefox seems to be able to run it from the local filesystem without any issue.
+你可以将这个解决机下载后在本地离线使用。
 
-About LYNE
+但在本地使用 Google Chrome 打开会因为 "same origin" 安全限制而无法使用。详情参考 [这里][sameorigin], 或参考 [谷歌官方反馈 issue 47416][sameoriginissue]. Firefox 则似乎能正常运行。
+
+关于游戏 LYNE
 ----------
 
-[LYNE][] is a puzzle game written by [Thomas Bowker][tb] using [Unity][]. It is available on digital distribution platforms: [Google Play][play], [Amazon App Store][amazon], [iTunes][itunes], [Windows Phone Store][wp], [Steam][steam], [Humble Bundle Store][humble], [itch.io][itch]. It is also available [DRM-free][lyne].
+[LYNE][] 是由 [Thomas Bowker][tb] 使用 [Unity][] 编写的一款游戏。你可以在 [Google Play][play]、 [亚马逊应用商店][amazon], [iTunes][itunes], [Windows Phone 商店][wp], [Steam][steam], [Humble Bundle 商店][humble], [itch.io][itch] 上找到它。同时，这个游戏还提供 [DRM-free][lyne] 版本
 
 About this solver (under-the-hood information)
 ----------------------------------------------
