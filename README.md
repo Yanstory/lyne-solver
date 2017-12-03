@@ -21,11 +21,11 @@ LYNE 谜题解决机 汉化版
 
 谜题布局的输入方式以下方字母定义：
 
-* 小写字母 `t`, `s`, `d`, `p`, `h` 代表经过点的图形
+* 小写字母 `t`、`s`、`d`、`p`、`h` 代表经过点的图形
 
 （其中t=三角形，s=正方形，d=菱形，p=五边形，h=六边形）
-* 大写字母 `T`, `S`, `D`, `P`, `H` 代表起止点图形（中间会有一个白色填充）
-* 数字 `1`, `2`, `3`, `4` 代表可以多次经过的图形（数字代表可以经过的次数）
+* 大写字母 `T`、`S`、`D`、`P`、`H` 代表起止点图形（中间会有一个白色填充）
+* 数字 `1`、`2`、`3`、`4` 代表可以多次经过的图形（数字代表可以经过的次数）
 * `空格` 代表一个没有图形的分隔点
 * 同时 `0` (零) 也可以代表分隔点
 
@@ -41,7 +41,7 @@ LYNE 谜题解决机 汉化版
 关于游戏 LYNE
 ----------
 
-[LYNE][] 是由 [Thomas Bowker][tb] 使用 [Unity][] 编写的一款游戏。你可以在 [Google Play][play]、 [亚马逊应用商店][amazon], [iTunes][itunes], [Windows Phone 商店][wp], [Steam][steam], [Humble Bundle 商店][humble], [itch.io][itch] 上找到它。同时，这个游戏还提供 [DRM-free][lyne] 版本
+[LYNE][] 是由 [Thomas Bowker][tb] 使用 [Unity][] 编写的一款游戏。你可以在 [Google Play][play]、 [亚马逊应用商店][amazon]、[iTunes][itunes]、[Windows Phone 商店][wp]、[Steam][steam]、[Humble Bundle 商店][humble]、[itch.io][itch] 上找到它。同时，这个游戏还提供 [DRM-free][lyne] 版本。
 
 About this solver (under-the-hood information)
 ----------------------------------------------
